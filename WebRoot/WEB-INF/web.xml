@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+  <servlet>
+    <servlet-name>NewsRelease</servlet-name>
+    <servlet-class>com.Servlet.NewsRelease</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>VerifyCode</servlet-name>
+    <servlet-class>com.Servlet.VerifyCode</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.Servlet.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>com.Servlet.Logout</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsList</servlet-name>
+    <servlet-class>com.Servlet.NewsList</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsDetail</servlet-name>
+    <servlet-class>com.Servlet.NewsDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsManage</servlet-name>
+    <servlet-class>com.Servlet.NewsManage</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsUpdate</servlet-name>
+    <servlet-class>com.Servlet.NewsUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <description>UploadHandleServlet</description>
+    <display-name>UploadHandleServlet</display-name>
+    <servlet-name>UploadHandle</servlet-name>
+    <servlet-class>com.Servlet.UploadHandle</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>NewsRelease</servlet-name>
+    <url-pattern>/servlet/NewsRelease</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VerifyCode</servlet-name>
+    <url-pattern>/servlet/VerifyCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/servlet/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/servlet/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsList</servlet-name>
+    <url-pattern>/servlet/NewsList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsDetail</servlet-name>
+    <url-pattern>/servlet/NewsDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsManage</servlet-name>
+    <url-pattern>/servlet/NewsManage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsUpdate</servlet-name>
+    <url-pattern>/servlet/NewsUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadHandle</servlet-name>
+    <url-pattern>/servlet/UploadHandle</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.Filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/console/*</url-pattern>
+  </filter-mapping>
+  
+  
+ <!-- 监听器 -->
+ <listener>
+  <listener-class>com.Listener.CheckConnectionListener</listener-class>
+ </listener>
+  
+
+</web-app>
